@@ -1,0 +1,18 @@
+
+type Query {
+    saludo(name:String!):String!
+    despedida(name:String!):Float!
+}
+
+type Mutation {
+    persona(data:inputPersona!):Persona
+}
+type Persona {
+    nombre:String!
+    edad:Int
+}
+
+input inputPersona {
+    nombre:String!
+    edad:Int
+}
