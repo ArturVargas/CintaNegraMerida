@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
 app.post('/new/user', verify.verifyTkn, register);
 app.post('/login', login);
 
-
 app.listen(PORT, () => {
     console.log(`Servidor Escuchando en port ${PORT}`);
 })
