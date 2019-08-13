@@ -76,3 +76,12 @@ exports.register = (req, res) => {
     }
 
 }
+
+exports.users = (req, res) => {
+    user.find().exec((err, users) => {
+        if(err) return res.status(500).json({message: 'Sin datos'});
+        if(users){
+            res.status(200).json({users: users})
+        }
+    })
+}
